@@ -1,0 +1,464 @@
+[
+  {
+    "file": "anomalies_daily.parquet",
+    "rows": 161,
+    "columns": [
+      "date",
+      "iso_dow",
+      "metric",
+      "value",
+      "baseline",
+      "pct_vs_baseline",
+      "robust_z"
+    ]
+  },
+  {
+    "file": "anomalies_weekly.parquet",
+    "rows": 20,
+    "columns": [
+      "week_start",
+      "metric",
+      "value",
+      "baseline",
+      "pct_vs_baseline",
+      "robust_z"
+    ]
+  },
+  {
+    "file": "attribution_sensitivity.parquet",
+    "rows": 1,
+    "columns": [
+      "commercial_patients",
+      "affiliate_lnd",
+      "affiliate_conversion_session",
+      "affiliate_only_lnd",
+      "affiliate_only_conversion",
+      "paid_lnd",
+      "paid_conversion_session"
+    ]
+  },
+  {
+    "file": "campaign_economics_lnd.parquet",
+    "rows": 9,
+    "columns": [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "spend_pln",
+      "clicks",
+      "first_day",
+      "last_day",
+      "days",
+      "new_patients",
+      "n_d90",
+      "contribution_d90"
+    ]
+  },
+  {
+    "file": "channel_economics_conversion_session.parquet",
+    "rows": 7,
+    "columns": [
+      "channel",
+      "new_patients",
+      "n_d90",
+      "contribution_d90",
+      "contribution_unbounded",
+      "media_spend",
+      "affiliate_cost"
+    ]
+  },
+  {
+    "file": "channel_economics_lnd.parquet",
+    "rows": 7,
+    "columns": [
+      "channel",
+      "new_patients",
+      "n_d90",
+      "net_d90",
+      "contribution_d90",
+      "repurchase_d90",
+      "net_unbounded",
+      "contribution_unbounded",
+      "media_spend",
+      "clicks",
+      "affiliate_cost",
+      "affiliate_patients"
+    ]
+  },
+  {
+    "file": "cohort_day.parquet",
+    "rows": 7843,
+    "columns": [
+      "date",
+      "channel",
+      "campaign",
+      "patients",
+      "n_d7",
+      "n_d30",
+      "n_d60",
+      "n_d90",
+      "repurchased_d7",
+      "repurchased_d30",
+      "repurchased_d60",
+      "repurchased_d90",
+      "session_active_d7",
+      "session_active_d30",
+      "session_active_d90",
+      "repeat_orders_d90",
+      "net_d7",
+      "net_d30",
+      "net_d90",
+      "contribution_d7",
+      "contribution_d30",
+      "contribution_d90",
+      "net_unbounded",
+      "doctor_unbounded",
+      "go_fee",
+      "contribution_unbounded",
+      "affiliate_patients"
+    ]
+  },
+  {
+    "file": "cohort_monthly.parquet",
+    "rows": 24,
+    "columns": [
+      "cohort_month",
+      "patients",
+      "n_d7",
+      "n_d30",
+      "n_d60",
+      "n_d90",
+      "repurchased_d7",
+      "repurchased_d30",
+      "repurchased_d60",
+      "repurchased_d90",
+      "session_active_d7",
+      "session_active_d30",
+      "session_active_d90",
+      "ltv_net_d30",
+      "ltv_net_d90",
+      "contribution_d30",
+      "contribution_d90",
+      "frequency_to_d90"
+    ]
+  },
+  {
+    "file": "daily_kpi.parquet",
+    "rows": 730,
+    "columns": [
+      "date",
+      "iso_dow",
+      "week_start",
+      "month_start",
+      "sessions",
+      "intent_sessions",
+      "commercial_purchases",
+      "go_only",
+      "commercial_orders",
+      "net",
+      "doctor",
+      "order_contribution",
+      "new_patients",
+      "go_fee",
+      "media_spend",
+      "affiliate_cost",
+      "contribution",
+      "contribution_after_acquisition_cost"
+    ]
+  },
+  {
+    "file": "definition_comparison.parquet",
+    "rows": 1,
+    "columns": [
+      "new_patients_any_paid",
+      "first_paid_is_testqa",
+      "returning_orders_if_testqa_counts",
+      "new_patients_commercial",
+      "returning_orders_commercial",
+      "commercial_new_previously_counted_as_returning",
+      "net_on_commercial_first_orders",
+      "net_on_reclassified_first_orders"
+    ]
+  },
+  {
+    "file": "definition_milestones.parquet",
+    "rows": 1,
+    "columns": [
+      "commercial_patients",
+      "patients_with_occurred_visit",
+      "patients_with_kept_completed",
+      "first_occurred_is_refunded",
+      "occurred_but_never_kept",
+      "kept_later_than_first_occurred",
+      "acquisition_moves_off_testqa",
+      "median_days_testqa_to_commercial",
+      "max_days_testqa_to_commercial",
+      "first_occurred_on_later_day",
+      "first_status_completed",
+      "first_status_refunded",
+      "first_status_cancelled",
+      "first_status_no_show"
+    ]
+  },
+  {
+    "file": "funnel_by_channel.parquet",
+    "rows": 9,
+    "columns": [
+      "segment",
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "payment_started",
+      "commercial_purchase",
+      "go_only"
+    ]
+  },
+  {
+    "file": "funnel_by_device.parquet",
+    "rows": 3,
+    "columns": [
+      "segment",
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "payment_started",
+      "commercial_purchase",
+      "go_only"
+    ]
+  },
+  {
+    "file": "funnel_by_landing.parquet",
+    "rows": 13,
+    "columns": [
+      "landing_page",
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "commercial_purchase",
+      "go_only"
+    ]
+  },
+  {
+    "file": "funnel_by_month.parquet",
+    "rows": 24,
+    "columns": [
+      "month_start",
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "payment_started",
+      "commercial_purchase",
+      "go_only"
+    ]
+  },
+  {
+    "file": "funnel_intent.parquet",
+    "rows": 1,
+    "columns": [
+      "intent_sessions",
+      "reached_slot",
+      "registration",
+      "login",
+      "already_logged_in",
+      "reached_payment",
+      "commercial_purchase"
+    ]
+  },
+  {
+    "file": "funnel_overall.parquet",
+    "rows": 1,
+    "columns": [
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "registration",
+      "login",
+      "already_logged_in",
+      "payment_started_on_intent",
+      "commercial_purchase",
+      "testqa_purchase",
+      "go_only",
+      "browse_only",
+      "consultation_abandoned",
+      "account_only",
+      "sessions_with_known_specialization"
+    ]
+  },
+  {
+    "file": "go_accounting.parquet",
+    "rows": 1,
+    "columns": [
+      "memberships",
+      "fees",
+      "standalone_memberships",
+      "standalone_fees",
+      "go_discount_orders",
+      "discount_vs_list",
+      "contribution_at_go_price",
+      "not_a_causal_counterfactual",
+      "patients_with_any_go",
+      "go_on_first_commercial_order",
+      "patients_with_standalone_go"
+    ]
+  },
+  {
+    "file": "go_day.parquet",
+    "rows": 3205,
+    "columns": [
+      "date",
+      "device",
+      "channel",
+      "campaign",
+      "is_standalone",
+      "memberships",
+      "go_fee"
+    ]
+  },
+  {
+    "file": "go_impact.parquet",
+    "rows": 3,
+    "columns": [
+      "ever_go",
+      "go_on_first_order",
+      "patients",
+      "n_d90",
+      "repurchase_d90",
+      "session_d30",
+      "ltv_net_d90",
+      "contribution_d90",
+      "frequency_d90",
+      "go_fee",
+      "net_all",
+      "contribution_all"
+    ]
+  },
+  {
+    "file": "headlines.json",
+    "rows": null,
+    "columns": []
+  },
+  {
+    "file": "order_day.parquet",
+    "rows": 27952,
+    "columns": [
+      "date",
+      "device",
+      "channel",
+      "campaign",
+      "specialization",
+      "is_test_qa",
+      "orders",
+      "net",
+      "doctor",
+      "order_contribution"
+    ]
+  },
+  {
+    "file": "purpose_mode.parquet",
+    "rows": 12,
+    "columns": [
+      "visit_purpose",
+      "consultation_mode",
+      "orders",
+      "net",
+      "contribution"
+    ]
+  },
+  {
+    "file": "retention_summary.parquet",
+    "rows": 1,
+    "columns": [
+      "patients",
+      "n_d7",
+      "n_d30",
+      "n_d60",
+      "n_d90",
+      "repurchase_d7",
+      "repurchase_d30",
+      "repurchase_d60",
+      "repurchase_d90",
+      "session_d7",
+      "session_d30",
+      "session_d90",
+      "ltv_net_d7",
+      "ltv_net_d30",
+      "ltv_net_d60",
+      "ltv_net_d90",
+      "ltv_net_unbounded_mixed_maturity",
+      "contribution_d7",
+      "contribution_d30",
+      "contribution_d90",
+      "contribution_unbounded_mixed_maturity",
+      "frequency_d90",
+      "frequency_unbounded_mixed_maturity",
+      "net_sum",
+      "doctor_sum",
+      "go_sum",
+      "contribution_sum"
+    ]
+  },
+  {
+    "file": "session_day.parquet",
+    "rows": 70187,
+    "columns": [
+      "date",
+      "device",
+      "channel",
+      "campaign",
+      "landing_page",
+      "sessions",
+      "service_selected",
+      "slot_selected",
+      "payment_started",
+      "commercial_purchase",
+      "testqa_purchase",
+      "go_only",
+      "browse_only"
+    ]
+  },
+  {
+    "file": "specialization_economics.parquet",
+    "rows": 10,
+    "columns": [
+      "specialization",
+      "orders",
+      "patients_touching_spec",
+      "net",
+      "doctor",
+      "contribution",
+      "contribution_per_order",
+      "completed",
+      "refunded",
+      "cancelled",
+      "no_show",
+      "go_priced"
+    ]
+  },
+  {
+    "file": "spend_day.parquet",
+    "rows": 5676,
+    "columns": [
+      "date",
+      "channel",
+      "campaign",
+      "media_spend",
+      "clicks"
+    ]
+  },
+  {
+    "file": "visit_timing.parquet",
+    "rows": 1,
+    "columns": [
+      "occurred_commercial_visits",
+      "occurred_without_started_at",
+      "p50_min_after_payment",
+      "p90_min_after_payment",
+      "max_min_after_payment",
+      "p50_min_vs_slot",
+      "min_min_vs_slot",
+      "max_min_vs_slot",
+      "start_date_differs_from_payment",
+      "start_date_differs_from_slot"
+    ]
+  }
+]
